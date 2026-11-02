@@ -1,0 +1,388 @@
+@font-face {
+  font-family: 'pikmin';
+  src: url('https://dl.dropboxusercontent.com/s/tduth0kcpxhicl7/PIKMIN.TTF') format('truetype');
+}
+ 
+@font-face {
+  font-family: 'DFPOP1-W3';
+  src: url('https://file.garden/Zdk07-gxzVCR-6no/fonts/DFPOP1-W3.woff') format('woff'),
+       url('https://file.garden/Zdk07-gxzVCR-6no/fonts/DFPOP1-W3.ttf') format('truetype');
+}
+ 
+:root {
+  --purble: #7B7B94;  
+  --hover:  #7B7B94;
+  --yellow:   #e0d67d;
+  --pink:    #ff89b0; 
+  --span:   #ff9eb3;  
+  --yellow2: #FEE9AA;
+  --white:  #F9F5EA;
+  --font:   #302C30;
+ 
+  --bar-gradient: linear-gradient(0.25turn, var(--purble), var(--yellow), var(--pink));
+}
+ 
+
+.ttl,
+.linkbutton,
+.exitx,
+.title-bar,
+.subtitle,
+button,
+#tt {
+  font-family: 'pikmin';
+}
+ 
+
+.ttl,
+.linkbutton,
+.subtitle {
+  text-shadow:
+    2px 2px 0 var(--outline),
+    -2px 2px 0 var(--outline),
+    -2px -2px 0 var(--outline),
+    2px -2px 0 var(--outline);
+}
+ 
+.ttl                { --outline: var(--pink); }
+.linkbutton,
+.subtitle           { --outline: var(--yellow); }
+.linkbutton:hover   { --outline: var(--font); }
+ 
+
+ 
+* {
+  cursor: url("0_cursor/cursor.png"), auto !important;
+}
+ 
+body {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--span);
+  background-image: url("starsky.gif");
+  background-attachment: fixed;
+  color: var(--font);
+  font-family: 'DFPOP1-W3';
+  font-size: 14px;
+}
+ 
+body.home {
+  margin: 0;
+}
+ 
+::selection {
+  background: var(--purble);
+}
+ 
+::-webkit-scrollbar         { width: 10px; }
+::-webkit-scrollbar-track   { background: var(--purble); }
+::-webkit-scrollbar-thumb   { background: var(--yellow); }
+ 
+a:link,
+a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+ 
+hr {
+  border: none;
+  border-top: 3px solid var(--purble);
+  border-radius: 2px;
+  color: var(--purble);
+  overflow: visible;
+  text-align: center;
+}
+ 
+span {
+  font-weight: bold;
+}
+ 
+img {
+  display: block;
+  margin: 0;
+}
+ 
+button img {
+  display: inline;
+  vertical-align: bottom;
+}
+ 
+ 
+ 
+.container {
+  width: 80vw;
+  height: 100vh;
+  margin: 0 auto;
+  padding-top: 80px;
+  overflow: hidden;
+}
+ 
+.flex {
+  display: flex;
+  justify-content: center;
+}
+ 
+main {
+  margin: auto;
+  z-index: 10;
+}
+
+aside {
+  width: 300px;
+  margin: auto;
+}
+ 
+section {
+  margin: 10px auto auto;
+  padding: 6px;
+  background-color: var(--yellow);
+}
+ 
+iframe {
+  width: 700px;
+  height: 525px;
+  margin-bottom: -3px;
+  border: 0;
+  border-radius: 25px;
+}
+ 
+ 
+
+ 
+.window {
+  padding: 5px; 
+  background-color: var(--yellow);
+  box-shadow:
+    inset -1px -1px var(--purble),
+    inset 1px 1px #DAE8F6,
+    inset -2px -2px grey,
+    inset 2px 2px var(--white);
+}
+ 
+.window-body,
+.window-body-musicplayer,
+.window-body-sidebar {
+  margin: 2px;
+  border-radius: 25px;
+}
+ 
+.window-body-musicplayer img {
+  border-radius: 25px;
+}
+ 
+.window-body-sidebar {
+  max-height: 220px;
+  overflow: auto;
+  overflow-x: hidden;
+}
+ 
+.title-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 24px;
+  margin-bottom: 5px;
+  padding: 3px 5px 3px 0;
+  border-radius: 25px;
+  background: var(--bar-gradient);
+  color: var(--white);
+  font-size: 14px;
+}
+ 
+.title-bar img {
+  padding: 3px;
+  border: 3px solid var(--yellow);
+  border-radius: 25px;
+}
+ 
+.title-bar-controls {
+  display: flex;
+}
+ 
+.exitx {
+  display: inline;
+  padding-right: 8px;
+  color: var(--purble);
+  font-size: 24px;
+}
+ 
+.exitx:hover {
+  color: var(--font);
+}
+ 
+.subtitle {
+  border-radius: 25px;
+  background-color: var(--yellow);
+  font-size: 24px;
+  text-align: center;
+}
+ 
+button {
+  width: 35px;
+  margin-top: 5px;
+  padding: 5px;
+  border: solid var(--purble);
+  border-radius: 25px;
+  background: var(--yellow);
+  color: inherit;
+  font-size: 16px;
+  text-align: center;
+}
+ 
+button:active {
+  background: var(--purble);
+}
+ 
+ 
+ 
+taskbar {
+  position: fixed;
+  bottom: 0;
+  z-index: 99;
+  width: 100vw;
+  height: 32px;
+  background: var(--bar-gradient);
+  color: var(--font);
+}
+ 
+taskbar img {
+  display: inline;
+}
+ 
+.ttl {
+  position: fixed;
+  left: 0;
+  bottom: 2px;
+  width: 220px;
+  height: 20px;
+  padding: 2px;
+  border: 2px inset var(--purble);
+  background: linear-gradient(0.25turn, var(--pink), var(--yellow));
+  color: var(--font);
+  font-size: 22px;
+  text-align: center;
+}
+ 
+.ttl:active {
+  background: var(--purble);
+}
+ 
+.ttlnav {
+  margin-top: -3px;
+}
+ 
+.menu {
+  display: none;
+  position: absolute;
+  bottom: 32px;
+  left: 0;
+  width: 218px;
+  border: 5px solid var(--yellow);
+  background-color: var(--yellow);
+}
+ 
+.menu.opened {
+  display: block;
+}
+ 
+.linkbutton {
+  height: 32px;
+  padding: 1px;
+  border-top: 2px solid var(--purble);
+  background-color: var(--pink);
+  color: var(--font);
+  font-size: 22px;
+  letter-spacing: -.5px;
+  text-align: right;
+}
+ 
+.linkbutton:hover {
+  background-color: var(--purble);
+  color: var(--yellow);
+}
+ 
+.linkbutton img {
+  display: inline;
+}
+ 
+tronspage,
+weather {
+  position: fixed;
+  bottom: 2px;
+  width: 20px;
+  height: 20px;
+  padding: 2px;
+  border: 2px inset var(--purble);
+}
+ 
+tronspage { right: 170px; }
+weather   { right: 135px; }
+ 
+#tt {
+  position: fixed;
+  right: 10px;
+  bottom: 2px;
+  width: 110px;
+  height: 20px;
+  padding: 2px;
+  border: 2px inset var(--purble);
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+ 
+ 
+ 
+#musicplayer {
+  position: fixed;
+  right: 350px;
+  bottom: 120px;
+  z-index: 93;
+  width: 300px;
+}
+ 
+.music-body {
+  text-align: center;
+}
+ 
+.musicinfo {
+  padding: 5px;
+  border: 3px solid var(--purble);
+  border-radius: 25px;
+}
+ 
+.musicinfo marquee {
+  font-weight: bold;
+}
+ 
+.albumcover img {
+  border: 3px solid var(--yellow)2;
+}
+ 
+#sidebarone,
+#sidebartwo,
+#sidebarthree {
+  position: fixed;
+}
+ 
+#sidebarone   { top: 50px;  right: 300px; z-index: 91; width: 300px; }
+#sidebartwo   { top: 200px; right: 80px;  z-index: 92; width: 200px; }
+#sidebarthree { top: 200px; right: 380px; z-index: 92; width: 250px; }
+ 
+ 
+ 
+@keyframes fadeIn {
+  0%   { opacity: 0; }
+  50%  { opacity: 0; }
+  100% { opacity: 1; }
+}
+ 
+.fade-in  { animation: fadeIn 2s; }
+.fade-in2 { animation: fadeIn 5s; }
+ 
+ 
+ 
+.ygoring {
+  font-size: 10px;
+}
+ 

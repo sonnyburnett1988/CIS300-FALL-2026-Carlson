@@ -1,0 +1,141 @@
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<title>lemon grove</title>
+
+ 
+</head>
+<body onload="digi(), weatherFn()" topmargin="0" bottommargin="0" leftmargin="0" rightmargin="0" marginwidth="0" marginheight="0">
+
+<div class="fade-in">
+
+</div>
+
+<div class="fade-in2">
+
+<taskbar>
+
+        <div class=ttl><a href="" class="open-menu"><div class="ttlnav">navigation</div></a></div>
+
+        <nav class="menu">
+       
+        </nav>
+
+
+<div id='tt'></div>
+</taskbar>
+
+<div id="musicplayer">
+<div id="draggable" class="window">
+<div class="title-bar">
+<div class="title-bar-text">
+</div>media player
+<div class="title-bar-controls"><a><div onclick="pauseAudio()" class="exitx">X</div></a></div></div>
+
+<div class="window-body-musicplayer">
+<audio id="music" autoplay="" loop="" src="https://file.garden/Zdk07-gxzVCR-6no/music/rainbow%20speedway.mp3"></audio>
+<div align=center>
+</td><td width=180px><div align=center>
+<div class="musicinfo"><marquee width=110px scrollamount="2">cloud 9 - rainbow speedway</marquee> | 3:01</div>
+
+<button onclick="playAudio()">▶</button>
+<button onclick="pauseAudio()">⏸</button>
+<script>
+var x = document.getElementById("music"); 
+
+function playAudio() { 
+  x.play(); 
+} 
+
+function pauseAudio() { 
+  x.pause(); 
+} 
+</script>
+                    <script>
+                     var audio = document.getElementById("music");
+                     audio.volume = 0.3;
+                   </script>
+</div>
+</td></tr></table>
+</div></div>
+</div>
+</div>
+
+<div class="container">
+  <div class="flex">
+
+    <main>
+
+<div class="window">
+
+<div class="title-bar">
+<div class="title-bar-text"></div> lemon grove
+<div class="title-bar-controls"><a href="index.html"><div class="exitx">X</div></a></div>
+</div>
+
+<div class="window-body"> 
+<iframe src="welcome.html" frameborder="0" scrolling="yes" name="frame" id="mainframe">
+          </iframe>
+</div>
+</div>
+
+
+</main>
+
+<aside>
+</aside>
+
+
+
+
+
+
+
+        <script>
+            var openMenuBtn = document.getElementsByClassName('open-menu')[0],
+                menu        = document.getElementsByClassName('menu')[0];
+            
+            openMenuBtn.addEventListener('click', function ( e ) {
+                e.preventDefault();
+                menu.classList.toggle('opened');
+            }, false);
+        </script>
+
+
+
+<script>
+function updateClock() {
+  const currentTime = new Date();
+  let hours = currentTime.getHours();
+  let minutes = currentTime.getMinutes();
+  const period = hours >= 12 ? 'PM' : 'AM';
+  
+    hours = hours % 12 || 12;
+  minutes = minutes < 10 ? '0' + minutes : minutes;
+  const clockTime = hours + ':' + minutes +' ' + period;
+  document.getElementById('tt').textContent = clockTime;
+}
+setInterval(updateClock, 1000); 
+updateClock(); 
+</script>
+ 
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://momentjs.com/downloads/moment.min.js">
+</script><script src="script2.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+  <script src="https://code.jquery.com/ui/1.14.2/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#musicplayer" ).draggable();
+    $( "#sidebarone" ).draggable();
+    $( "#sidebartwo" ).draggable();
+  } );
+  </script>
+
+
+</body>
+</html>
