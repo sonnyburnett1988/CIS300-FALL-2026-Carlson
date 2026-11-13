@@ -1,9 +1,6 @@
 @font-face {
-  font-family: Pixel Operator;
-  src: url('https://angelhotspot.neocities.org/Font/PixelOperator.eot');
-  src: url('https://angelhotspot.neocities.org/Font/PixelOperator.eot#iefix') format('embedded-opentype'), url('https://angelhotspot.neocities.org/Font/PixelOperator.ttf') format('truetype'), url('https://angelhotspot.neocities.org/Font/PixelOperator.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
+  font-family: 'pikmin';
+  src: url('https://dl.dropboxusercontent.com/s/tduth0kcpxhicl7/PIKMIN.TTF') format('truetype');
 }
  
 @font-face {
@@ -33,7 +30,7 @@
 .subtitle,
 button,
 #tt {
-  font-family: 'Pixel Operator';
+  font-family: 'pikmin';
 }
  
 
