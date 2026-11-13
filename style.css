@@ -8,7 +8,7 @@
   src: url('https://file.garden/Zdk07-gxzVCR-6no/fonts/DFPOP1-W3.woff') format('woff'),
        url('https://file.garden/Zdk07-gxzVCR-6no/fonts/DFPOP1-W3.ttf') format('truetype');
 }
- 
+
 :root {
   --purble: #7B7B94;  
   --hover:  #7B7B94;
@@ -385,4 +385,3 @@ weather   { right: 135px; }
 .ygoring {
   font-size: 10px;
 }
- 
